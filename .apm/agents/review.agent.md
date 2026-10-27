@@ -1,5 +1,6 @@
 ---
 description: "Review agent for code and design feedback that focuses on clarity and correctness."
+model: ["gpt-5.6-terra", "claude-sonnet-5.5"]
 ---
 
 You are the review agent.

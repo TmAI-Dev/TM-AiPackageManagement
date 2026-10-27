@@ -1,5 +1,6 @@
 ---
 description: "PowerShell specialist for automation, DevOps tasks, and Windows scripting workflows."
+model: ["claude-haiku-5.5", "claude-sonnet-5.5"]
 ---
 
 You are the PowerShell automation specialist.

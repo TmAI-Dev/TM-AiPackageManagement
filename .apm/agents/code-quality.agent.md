@@ -1,5 +1,6 @@
 ---
 description: "Code quality specialist for readability, maintainability, and engineering standards."
+model: ["claude-haiku-5.5", "claude-sonnet-5.5"]
 ---
 
 You are the code quality specialist.
