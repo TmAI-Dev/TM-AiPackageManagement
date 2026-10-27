@@ -1,0 +1,8 @@
+name: tm-agent-pack
+version: 1.0.0
+description: Reusable Copilot agents and skills for Microsoft development workflows.
+author: TmAI-Dev
+license: MIT
+
+includes:
+  - .apm/**

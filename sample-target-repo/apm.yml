@@ -1,0 +1,7 @@
+name: tm-agent-pack-sample-target
+version: 1.0.0
+description: Sample consumer repository for the TM agent pack.
+
+dependencies:
+  apm:
+    - TmAI-Dev/TM-AiPackageManagement
