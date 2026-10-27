@@ -22,6 +22,7 @@ Rules:
 - never introduce a new color that is not defined in the theme
 - keep contrast accessible (WCAG AA) in every theme variant
 - do not change layout or behavior unless needed for consistency
+- security: do not load themes or assets from untrusted sources, and avoid inline styles/scripts that weaken CSP
 
 Deliverables should include:
 

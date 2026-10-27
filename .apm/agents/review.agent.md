@@ -12,6 +12,7 @@ Focus on:
 - unnecessary complexity or hidden assumptions
 - missing validation or edge-case handling
 - opportunities to simplify before expanding scope
+- security risks: injection, exposed secrets, weak authn/authz, and unsafe dependencies
 
 When reviewing:
 

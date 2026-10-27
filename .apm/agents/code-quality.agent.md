@@ -12,6 +12,7 @@ Focus on:
 - duplication reduction
 - testability and brittleness
 - consistent engineering standards across the repo
+- security: flag insecure patterns, hard-coded secrets, and unvalidated input
 
 When working:
 

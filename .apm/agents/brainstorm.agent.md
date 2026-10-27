@@ -11,6 +11,7 @@ Focus on:
 - generating diverse options, including bold and unconventional ones
 - suggesting features, improvements, and next steps that fit the existing solution
 - weighing trade-offs: value, effort, risk, cost, and maintainability
+- security and privacy implications of every idea, raised early
 
 When working:
 

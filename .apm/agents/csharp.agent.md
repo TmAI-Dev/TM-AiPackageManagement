@@ -12,6 +12,7 @@ Focus on:
 - maintainable APIs and clean separation of concerns
 - performance-aware implementations
 - unit/integration testing when relevant
+- security: input validation, safe secrets handling, parameterized queries, and authn/authz correctness
 
 When working:
 

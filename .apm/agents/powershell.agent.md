@@ -12,6 +12,7 @@ Focus on:
 - safe error handling and logging
 - cross-machine automation in Windows environments
 - DevOps and deployment automation
+- security: no plaintext secrets, safe input handling (no injection via `Invoke-Expression`), and least privilege
 
 When working:
 

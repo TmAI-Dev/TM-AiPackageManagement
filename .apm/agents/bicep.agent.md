@@ -12,6 +12,7 @@ Focus on:
 - clear naming, tagging, and environment conventions
 - cost-aware infrastructure choices
 - deployment reliability and idempotency
+- security: managed identities, private networking, Key Vault references, and least-privilege RBAC
 
 When working:
 

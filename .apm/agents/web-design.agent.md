@@ -12,6 +12,7 @@ Focus on:
 - readable typography with a limited type scale
 - responsive, mobile-first layouts
 - accessibility (WCAG AA contrast, focus states, semantic HTML, keyboard support)
+- security: output encoding, no inline scripts or unsafe HTML injection, and safe handling of user input in forms
 
 When working:
 

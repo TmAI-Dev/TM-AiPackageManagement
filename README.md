@@ -19,6 +19,7 @@ This repo is an [APM](https://microsoft.github.io/apm/) package containing reusa
 │   ├── agents/
 │   │   ├── csharp.agent.md
 │   │   ├── powershell.agent.md
+│   │   ├── python.agent.md
 │   │   ├── bicep.agent.md
 │   │   ├── security.agent.md
 │   │   ├── review.agent.md
@@ -29,6 +30,7 @@ This repo is an [APM](https://microsoft.github.io/apm/) package containing reusa
 │   └── skills/
 │       ├── csharp/SKILL.md
 │       ├── powershell/SKILL.md
+│       ├── python/SKILL.md
 │       ├── bicep/SKILL.md
 │       ├── security/SKILL.md
 │       ├── review/SKILL.md
@@ -52,6 +54,7 @@ The `.apm/` directory is the package source and should always hold the common de
 
 - C# agent
 - PowerShell agent
+- Python agent
 - Bicep agent
 - Security agent
 - Review agent
@@ -100,6 +103,7 @@ The included agents are:
 
 - C# Agent
 - PowerShell Agent
+- Python Agent
 - Bicep Agent
 - Security Agent
 - Review Agent
