@@ -24,7 +24,8 @@ This repo is an [APM](https://microsoft.github.io/apm/) package containing reusa
 │   │   ├── review.agent.md
 │   │   ├── code-quality.agent.md
 │   │   ├── web-design.agent.md
-│   │   └── theme-consistency.agent.md
+│   │   ├── theme-consistency.agent.md
+│   │   └── brainstorm.agent.md
 │   └── skills/
 │       ├── csharp/SKILL.md
 │       ├── powershell/SKILL.md
@@ -33,7 +34,8 @@ This repo is an [APM](https://microsoft.github.io/apm/) package containing reusa
 │       ├── review/SKILL.md
 │       ├── code-quality/SKILL.md
 │       ├── web-design/SKILL.md
-│       └── theme-consistency/SKILL.md
+│       ├── theme-consistency/SKILL.md
+│       └── brainstorm/SKILL.md
 ├── scripts/
 │   └── bootstrap-agent-pack.ps1
 └── sample-target-repo/
@@ -56,6 +58,7 @@ The `.apm/` directory is the package source and should always hold the common de
 - Code quality agent
 - Web Design agent
 - Theme Consistency agent
+- Brainstorm agent
 
 ### Repo local additions
 
@@ -103,6 +106,7 @@ The included agents are:
 - Code Quality Agent
 - Web Design Agent
 - Theme Consistency Agent
+- Brainstorm Agent
 
 ## Notes
 
