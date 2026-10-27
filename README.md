@@ -22,14 +22,18 @@ This repo is an [APM](https://microsoft.github.io/apm/) package containing reusa
 │   │   ├── bicep.agent.md
 │   │   ├── security.agent.md
 │   │   ├── review.agent.md
-│   │   └── code-quality.agent.md
+│   │   ├── code-quality.agent.md
+│   │   ├── web-design.agent.md
+│   │   └── theme-consistency.agent.md
 │   └── skills/
 │       ├── csharp/SKILL.md
 │       ├── powershell/SKILL.md
 │       ├── bicep/SKILL.md
 │       ├── security/SKILL.md
 │       ├── review/SKILL.md
-│       └── code-quality/SKILL.md
+│       ├── code-quality/SKILL.md
+│       ├── web-design/SKILL.md
+│       └── theme-consistency/SKILL.md
 ├── scripts/
 │   └── bootstrap-agent-pack.ps1
 └── sample-target-repo/
@@ -50,6 +54,8 @@ The `.apm/` directory is the package source and should always hold the common de
 - Security agent
 - Review agent
 - Code quality agent
+- Web Design agent
+- Theme Consistency agent
 
 ### Repo local additions
 
@@ -95,6 +101,8 @@ The included agents are:
 - Security Agent
 - Review Agent
 - Code Quality Agent
+- Web Design Agent
+- Theme Consistency Agent
 
 ## Notes
 
