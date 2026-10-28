@@ -18,23 +18,37 @@ This repo is an [APM](https://microsoft.github.io/apm/) package containing reusa
 ├── .apm/
 │   ├── agents/
 │   │   ├── csharp.agent.md
+│   │   ├── razor-pages.agent.md
 │   │   ├── powershell.agent.md
 │   │   ├── python.agent.md
 │   │   ├── bicep.agent.md
+│   │   ├── terraform.agent.md
+│   │   ├── azure-policy.agent.md
+│   │   ├── azure-devops-pipelines.agent.md
+│   │   ├── sql.agent.md
+│   │   ├── kusto.agent.md
 │   │   ├── security.agent.md
 │   │   ├── review.agent.md
 │   │   ├── code-quality.agent.md
+│   │   ├── docs.agent.md
 │   │   ├── web-design.agent.md
 │   │   ├── theme-consistency.agent.md
 │   │   └── brainstorm.agent.md
 │   └── skills/
 │       ├── csharp/SKILL.md
+│       ├── razor-pages/SKILL.md
 │       ├── powershell/SKILL.md
 │       ├── python/SKILL.md
 │       ├── bicep/SKILL.md
+│       ├── terraform/SKILL.md
+│       ├── azure-policy/SKILL.md
+│       ├── azure-devops-pipelines/SKILL.md
+│       ├── sql/SKILL.md
+│       ├── kusto/SKILL.md
 │       ├── security/SKILL.md
 │       ├── review/SKILL.md
 │       ├── code-quality/SKILL.md
+│       ├── docs/SKILL.md
 │       ├── web-design/SKILL.md
 │       ├── theme-consistency/SKILL.md
 │       └── brainstorm/SKILL.md
@@ -53,12 +67,19 @@ Use this repository as the package source. Consumers should declare it in their 
 The `.apm/` directory is the package source and should always hold the common defaults:
 
 - C# agent
+- Razor Pages agent
 - PowerShell agent
 - Python agent
 - Bicep agent
-- Security agent
+- Terraform agent
+- Azure Policy agent
+- Azure DevOps Pipelines agent
+- SQL agent
+- Kusto (KQL) agent
+- Security agent (appsec, Azure security posture, threat modeling)
 - Review agent
 - Code quality agent
+- Docs agent
 - Web Design agent
 - Theme Consistency agent
 - Brainstorm agent
@@ -97,17 +118,42 @@ The wrapper requires APM to be installed and runs `apm install <package> --targe
 
 After running it, reload the VS Code window and pick the agent from the Chat agent picker. Commit `apm.yml` and `apm.lock.yaml` in each consumer repository; do not commit generated runtime files unless that repository intentionally manages them.
 
+## Updating existing installations
+
+To pull the latest agents and skills into a repository that already uses this package, run this from that repository:
+
+```powershell
+apm install --update --target copilot
+```
+
+This re-resolves dependencies to their latest versions and refreshes `apm.lock.yaml` and the deployed files. Review and commit the changed `apm.lock.yaml`, then reload the VS Code window.
+
+To update several repositories at once, run the update command in each:
+
+```powershell
+"C:\path\to\repo-1", "C:\path\to\repo-2" | ForEach-Object { Push-Location $_; apm install --update --target copilot; Pop-Location }
+```
+
+If an update does not pick up new content, run `apm install --help` to confirm the flags supported by your installed APM version.
+
 ## Example agent set
 
 The included agents are:
 
 - C# Agent
+- Razor Pages Agent
 - PowerShell Agent
 - Python Agent
 - Bicep Agent
+- Terraform Agent
+- Azure Policy Agent
+- Azure DevOps Pipelines Agent
+- SQL Agent
+- Kusto (KQL) Agent
 - Security Agent
 - Review Agent
 - Code Quality Agent
+- Docs Agent
 - Web Design Agent
 - Theme Consistency Agent
 - Brainstorm Agent
