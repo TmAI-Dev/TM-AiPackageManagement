@@ -27,6 +27,7 @@ This repo is an [APM](https://microsoft.github.io/apm/) package containing reusa
 │   │   ├── azure-devops-pipelines.agent.md
 │   │   ├── sql.agent.md
 │   │   ├── kusto.agent.md
+│   │   ├── data-analyst.agent.md
 │   │   ├── security.agent.md
 │   │   ├── review.agent.md
 │   │   ├── code-quality.agent.md
@@ -45,6 +46,7 @@ This repo is an [APM](https://microsoft.github.io/apm/) package containing reusa
 │       ├── azure-devops-pipelines/SKILL.md
 │       ├── sql/SKILL.md
 │       ├── kusto/SKILL.md
+│       ├── data-analyst/SKILL.md
 │       ├── security/SKILL.md
 │       ├── review/SKILL.md
 │       ├── code-quality/SKILL.md
@@ -76,6 +78,7 @@ The `.apm/` directory is the package source and should always hold the common de
 - Azure DevOps Pipelines agent
 - SQL agent
 - Kusto (KQL) agent
+- Data analyst agent
 - Security agent (appsec, Azure security posture, threat modeling)
 - Review agent
 - Code quality agent
@@ -150,6 +153,7 @@ The included agents are:
 - Azure DevOps Pipelines Agent
 - SQL Agent
 - Kusto (KQL) Agent
+- Data Analyst Agent
 - Security Agent
 - Review Agent
 - Code Quality Agent
