@@ -1,5 +1,5 @@
 name: tm-agent-pack
 version: 2.0.0
-description: Source repository for the TM agent packs (core, iac, dev). Install a pack from packs/<name>, not the repository root.
+description: Source repository for the TM agent packs (core, iac, data, dev). Install a pack from packs/<name>, not the repository root.
 author: TmAI-Dev
 license: MIT

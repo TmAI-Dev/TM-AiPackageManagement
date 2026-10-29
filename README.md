@@ -19,22 +19,22 @@ This repo is an [APM](https://microsoft.github.io/apm/) package containing reusa
 │   ├── core/                   # every repository
 │   │   ├── apm.yml
 │   │   └── .apm/
-│   │       ├── agents/         # review, security, code-quality, brainstorm
+│   │       ├── agents/         # review, security, code-quality, brainstorm, docs
 │   │       └── skills/
 │   ├── iac/                    # Infrastructure as Code repositories
 │   │   ├── apm.yml
 │   │   └── .apm/
-│   │       ├── agents/         # bicep, terraform, powershell
+│   │       ├── agents/         # bicep, terraform, powershell, Azure Policy, pipelines
 │   │       └── skills/
-│   ├── data/                   # SQL and Kusto repositories
+│   ├── data/                   # SQL, Kusto, and data analysis
 │   │   ├── apm.yml
 │   │   └── .apm/
-│   │       ├── agents/         # sql, kql
+│   │       ├── agents/         # sql, kql, data analyst
 │   │       └── skills/
 │   └── dev/                    # application development repositories
 │       ├── apm.yml
 │       └── .apm/
-│           ├── agents/         # csharp, python, web-design, theme-consistency
+│           ├── agents/         # csharp, Razor Pages, python, web-design, theme-consistency
 │           └── skills/
 └── sample-target-repo/
     └── apm.yml
@@ -46,14 +46,14 @@ Each consumer installs only what matches its domain, so unrelated agents do not 
 
 | Pack | Install path | Contents |
 |---|---|---|
-| core | `TmAI-Dev/TM-AiPackageManagement/packs/core` | Review, Security, Code Quality, Brainstorm |
-| iac | `TmAI-Dev/TM-AiPackageManagement/packs/iac` | Bicep (AVM-first), Terraform, PowerShell |
-| data | `TmAI-Dev/TM-AiPackageManagement/packs/data` | SQL, KQL (Kusto) |
-| dev | `TmAI-Dev/TM-AiPackageManagement/packs/dev` | C#, Python, Web Design, Theme Consistency |
+| core | `TmAI-Dev/TM-AiPackageManagement/packs/core` | Review, Security, Code Quality, Brainstorm, Docs |
+| iac | `TmAI-Dev/TM-AiPackageManagement/packs/iac` | Bicep (AVM-first), Terraform, PowerShell, Azure Policy, Azure DevOps Pipelines |
+| data | `TmAI-Dev/TM-AiPackageManagement/packs/data` | SQL, KQL (Kusto), Data Analyst |
+| dev | `TmAI-Dev/TM-AiPackageManagement/packs/dev` | C#, Razor Pages, Python, Web Design, Theme Consistency |
 
 Typical combinations: IaC repository = `core` + `iac`; application repository = `core` + `dev`; database or monitoring repository = `core` + `data`. Combine packs freely when a repository spans domains.
 
-Keep shared agents (review, security) in `core` only; do not duplicate them across packs. Keep repo-specific instructions in the target repo, not in these packs.
+Keep shared agents (review, security, code quality, brainstorm, and docs) in `core` only; do not duplicate them across packs. Keep repo-specific instructions in the target repo, not in these packs.
 
 ## Consumer setup
 
@@ -84,6 +84,24 @@ apm install TmAI-Dev/TM-AiPackageManagement/packs/dev --target copilot
 ```
 
 After installing, reload the VS Code window and pick the agent from the Chat agent picker. Commit `apm.yml` and `apm.lock.yaml` in each consumer repository; do not commit generated runtime files unless that repository intentionally manages them. On a fresh clone, run `apm install` to restore the packs.
+
+## Updating existing installations
+
+To pull the latest agents and skills into a repository that already uses this package, run this from that repository:
+
+```powershell
+apm install --update --target copilot
+```
+
+This re-resolves dependencies to their latest versions and refreshes `apm.lock.yaml` and the deployed files. Review and commit the changed `apm.lock.yaml`, then reload the VS Code window.
+
+To update several repositories at once, run the update command in each:
+
+```powershell
+"C:\path\to\repo-1", "C:\path\to\repo-2" | ForEach-Object { Push-Location $_; apm install --update --target copilot; Pop-Location }
+```
+
+If an update does not pick up new content, run `apm install --help` to confirm the flags supported by your installed APM version.
 
 ## Notes
 

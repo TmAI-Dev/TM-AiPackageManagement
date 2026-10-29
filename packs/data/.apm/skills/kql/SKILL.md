@@ -1,6 +1,6 @@
 # KQL skill
 
-Use this skill for Kusto Query Language queries in Azure Monitor, Log Analytics, Application Insights, Azure Data Explorer, and Sentinel.
+Use this skill for Kusto Query Language queries in Azure Monitor, Log Analytics, Application Insights, Azure Resource Graph, Azure Data Explorer, and Sentinel.
 
 ## Standards
 
@@ -9,6 +9,7 @@ Use this skill for Kusto Query Language queries in Azure Monitor, Log Analytics,
 - Prefer `has` over `contains`, and avoid `search *` on large tables
 - Use `let` for reusable values and sub-queries
 - Verify table and column names for the target service before use
+- Note syntax differences between Log Analytics, Resource Graph, and ADX
 
 ## Common expectations
 
