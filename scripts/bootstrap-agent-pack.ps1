@@ -1,6 +1,8 @@
 param(
     [string[]]$TargetRepos = @(),
-    [string]$Package = 'TmAI-Dev/TM-AiPackageManagement',
+    [string]$Repository = 'TmAI-Dev/TM-AiPackageManagement',
+    [ValidateSet('core', 'iac', 'dev')]
+    [string[]]$Packs = @('core'),
     [ValidateSet('copilot')]
     [string]$Target = 'copilot',
     [switch]$CreateSampleTarget
@@ -37,10 +39,13 @@ foreach ($targetRepo in $TargetRepos) {
 
     Push-Location $resolvedTarget
     try {
-        Write-Host "Installing $Package into $resolvedTarget..." -ForegroundColor Cyan
-        & apm install $Package --target $Target
-        if ($LASTEXITCODE -ne 0) {
-            throw "APM installation failed for $resolvedTarget with exit code $LASTEXITCODE."
+        foreach ($pack in $Packs) {
+            $package = "$Repository/packs/$pack"
+            Write-Host "Installing $package into $resolvedTarget..." -ForegroundColor Cyan
+            & apm install $package --target $Target
+            if ($LASTEXITCODE -ne 0) {
+                throw "APM installation of $package failed for $resolvedTarget with exit code $LASTEXITCODE."
+            }
         }
     }
     finally {

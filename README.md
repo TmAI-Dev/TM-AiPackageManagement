@@ -14,59 +14,42 @@ This repo is an [APM](https://microsoft.github.io/apm/) package containing reusa
 ```text
 .
 ├── README.md
-├── apm.yml
-├── .apm/
-│   ├── agents/
-│   │   ├── csharp.agent.md
-│   │   ├── powershell.agent.md
-│   │   ├── python.agent.md
-│   │   ├── bicep.agent.md
-│   │   ├── security.agent.md
-│   │   ├── review.agent.md
-│   │   ├── code-quality.agent.md
-│   │   ├── web-design.agent.md
-│   │   ├── theme-consistency.agent.md
-│   │   └── brainstorm.agent.md
-│   └── skills/
-│       ├── csharp/SKILL.md
-│       ├── powershell/SKILL.md
-│       ├── python/SKILL.md
-│       ├── bicep/SKILL.md
-│       ├── security/SKILL.md
-│       ├── review/SKILL.md
-│       ├── code-quality/SKILL.md
-│       ├── web-design/SKILL.md
-│       ├── theme-consistency/SKILL.md
-│       └── brainstorm/SKILL.md
+├── apm.yml                     # metadata only; install packs, not the root
+├── packs/
+│   ├── core/                   # every repository
+│   │   ├── apm.yml
+│   │   └── .apm/
+│   │       ├── agents/         # review, security, code-quality, brainstorm
+│   │       └── skills/
+│   ├── iac/                    # Infrastructure as Code repositories
+│   │   ├── apm.yml
+│   │   └── .apm/
+│   │       ├── agents/         # bicep, powershell
+│   │       └── skills/
+│   └── dev/                    # application development repositories
+│       ├── apm.yml
+│       └── .apm/
+│           ├── agents/         # csharp, python, web-design, theme-consistency
+│           └── skills/
 ├── scripts/
 │   └── bootstrap-agent-pack.ps1
 └── sample-target-repo/
     └── apm.yml
 ```
 
-## Recommended model
+## Packs
 
-Use this repository as the package source. Consumers should declare it in their own `apm.yml` and run APM.
+Each consumer installs only what matches its domain, so unrelated agents do not add context or confuse agent selection.
 
-### Shared pack
+| Pack | Install path | Contents |
+|---|---|---|
+| core | `TmAI-Dev/TM-AiPackageManagement/packs/core` | Review, Security, Code Quality, Brainstorm |
+| iac | `TmAI-Dev/TM-AiPackageManagement/packs/iac` | Bicep (AVM-first), PowerShell |
+| dev | `TmAI-Dev/TM-AiPackageManagement/packs/dev` | C#, Python, Web Design, Theme Consistency |
 
-The `.apm/` directory is the package source and should always hold the common defaults:
+Typical combinations: IaC repository = `core` + `iac`; application repository = `core` + `dev`.
 
-- C# agent
-- PowerShell agent
-- Python agent
-- Bicep agent
-- Security agent
-- Review agent
-- Code quality agent
-- Web Design agent
-- Theme Consistency agent
-- Brainstorm agent
-
-### Repo local additions
-
-Keep repo-specific instructions in the target repo, not in the central pack, when they depend on application-specific rules.
-
+Keep shared agents (review, security) in `core` only; do not duplicate them across packs. Keep repo-specific instructions in the target repo, not in these packs.
 ## Consumer setup
 
 On Windows, install APM with the official installer:
@@ -78,42 +61,29 @@ irm https://aka.ms/apm-windows | iex
 Alternatively, follow the full [installation guide](https://microsoft.github.io/apm/getting-started/installation/). Then run this from the target repository:
 
 ```powershell
-apm install TmAI-Dev/TM-AiPackageManagement --target copilot
+apm install TmAI-Dev/TM-AiPackageManagement/packs/core --target copilot
+apm install TmAI-Dev/TM-AiPackageManagement/packs/iac --target copilot
 ```
 
 APM will:
 
-- add the package to `apm.yml`
+- add the packages to `apm.yml`
 - write `apm.lock.yaml` with resolved versions and hashes
 - deploy agents and skills to the Copilot-supported runtime directories
 
-Use the wrapper when installing this package into several target repositories:
+Use the wrapper when installing packs into several target repositories (`-Packs` defaults to `core`):
 
 ```powershell
-pwsh ./scripts/bootstrap-agent-pack.ps1 -TargetRepos "C:\path\to\repo-1", "C:\path\to\repo-2"
+pwsh ./scripts/bootstrap-agent-pack.ps1 -TargetRepos "C:\path\to\iac-repo" -Packs core, iac
+pwsh ./scripts/bootstrap-agent-pack.ps1 -TargetRepos "C:\path\to\app-repo" -Packs core, dev
 ```
 
-The wrapper requires APM to be installed and runs `apm install <package> --target copilot` in each target. It does not copy or maintain generated runtime files.
+The wrapper requires APM to be installed and runs `apm install <repository>/packs/<pack> --target copilot` for each pack in each target. It does not copy or maintain generated runtime files.
 
 After running it, reload the VS Code window and pick the agent from the Chat agent picker. Commit `apm.yml` and `apm.lock.yaml` in each consumer repository; do not commit generated runtime files unless that repository intentionally manages them.
 
-## Example agent set
-
-The included agents are:
-
-- C# Agent
-- PowerShell Agent
-- Python Agent
-- Bicep Agent
-- Security Agent
-- Review Agent
-- Code Quality Agent
-- Web Design Agent
-- Theme Consistency Agent
-- Brainstorm Agent
-
 ## Notes
 
-This repository is intentionally not tied to one application. It acts as an APM package source for all your repositories.
+This repository is intentionally not tied to one application. It acts as an APM package source for all your repositories, split into packs by domain.
 
 If you later want stricter repo-level integration with other harnesses, add the corresponding APM target during installation without changing the package primitives.
