@@ -24,7 +24,12 @@ This repo is an [APM](https://microsoft.github.io/apm/) package containing reusa
 │   ├── iac/                    # Infrastructure as Code repositories
 │   │   ├── apm.yml
 │   │   └── .apm/
-│   │       ├── agents/         # bicep, powershell
+│   │       ├── agents/         # bicep, terraform, powershell
+│   │       └── skills/
+│   ├── data/                   # SQL and Kusto repositories
+│   │   ├── apm.yml
+│   │   └── .apm/
+│   │       ├── agents/         # sql, kql
 │   │       └── skills/
 │   └── dev/                    # application development repositories
 │       ├── apm.yml
@@ -42,10 +47,11 @@ Each consumer installs only what matches its domain, so unrelated agents do not 
 | Pack | Install path | Contents |
 |---|---|---|
 | core | `TmAI-Dev/TM-AiPackageManagement/packs/core` | Review, Security, Code Quality, Brainstorm |
-| iac | `TmAI-Dev/TM-AiPackageManagement/packs/iac` | Bicep (AVM-first), PowerShell |
+| iac | `TmAI-Dev/TM-AiPackageManagement/packs/iac` | Bicep (AVM-first), Terraform, PowerShell |
+| data | `TmAI-Dev/TM-AiPackageManagement/packs/data` | SQL, KQL (Kusto) |
 | dev | `TmAI-Dev/TM-AiPackageManagement/packs/dev` | C#, Python, Web Design, Theme Consistency |
 
-Typical combinations: IaC repository = `core` + `iac`; application repository = `core` + `dev`.
+Typical combinations: IaC repository = `core` + `iac`; application repository = `core` + `dev`; database or monitoring repository = `core` + `data`. Combine packs freely when a repository spans domains.
 
 Keep shared agents (review, security) in `core` only; do not duplicate them across packs. Keep repo-specific instructions in the target repo, not in these packs.
 

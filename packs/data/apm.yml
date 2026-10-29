@@ -1,0 +1,5 @@
+name: tm-agent-pack-data
+version: 1.0.0
+description: Data agents and skills - SQL and KQL (Kusto).
+author: TmAI-Dev
+license: MIT
