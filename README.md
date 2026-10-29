@@ -31,8 +31,6 @@ This repo is an [APM](https://microsoft.github.io/apm/) package containing reusa
 │       └── .apm/
 │           ├── agents/         # csharp, python, web-design, theme-consistency
 │           └── skills/
-├── scripts/
-│   └── bootstrap-agent-pack.ps1
 └── sample-target-repo/
     └── apm.yml
 ```
@@ -50,6 +48,7 @@ Each consumer installs only what matches its domain, so unrelated agents do not 
 Typical combinations: IaC repository = `core` + `iac`; application repository = `core` + `dev`.
 
 Keep shared agents (review, security) in `core` only; do not duplicate them across packs. Keep repo-specific instructions in the target repo, not in these packs.
+
 ## Consumer setup
 
 On Windows, install APM with the official installer:
@@ -71,16 +70,14 @@ APM will:
 - write `apm.lock.yaml` with resolved versions and hashes
 - deploy agents and skills to the Copilot-supported runtime directories
 
-Use the wrapper when installing packs into several target repositories (`-Packs` defaults to `core`):
+Use `core` + `dev` for application repositories:
 
 ```powershell
-pwsh ./scripts/bootstrap-agent-pack.ps1 -TargetRepos "C:\path\to\iac-repo" -Packs core, iac
-pwsh ./scripts/bootstrap-agent-pack.ps1 -TargetRepos "C:\path\to\app-repo" -Packs core, dev
+apm install TmAI-Dev/TM-AiPackageManagement/packs/core --target copilot
+apm install TmAI-Dev/TM-AiPackageManagement/packs/dev --target copilot
 ```
 
-The wrapper requires APM to be installed and runs `apm install <repository>/packs/<pack> --target copilot` for each pack in each target. It does not copy or maintain generated runtime files.
-
-After running it, reload the VS Code window and pick the agent from the Chat agent picker. Commit `apm.yml` and `apm.lock.yaml` in each consumer repository; do not commit generated runtime files unless that repository intentionally manages them.
+After installing, reload the VS Code window and pick the agent from the Chat agent picker. Commit `apm.yml` and `apm.lock.yaml` in each consumer repository; do not commit generated runtime files unless that repository intentionally manages them. On a fresh clone, run `apm install` to restore the packs.
 
 ## Notes
 
