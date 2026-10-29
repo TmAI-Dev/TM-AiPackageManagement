@@ -1,0 +1,5 @@
+name: tm-agent-pack-core
+version: 1.0.0
+description: Core agents and skills for every repository - review, security, code quality, brainstorming, and documentation.
+author: TmAI-Dev
+license: MIT

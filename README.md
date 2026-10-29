@@ -14,82 +14,46 @@ This repo is an [APM](https://microsoft.github.io/apm/) package containing reusa
 ```text
 .
 ├── README.md
-├── apm.yml
-├── .apm/
-│   ├── agents/
-│   │   ├── csharp.agent.md
-│   │   ├── razor-pages.agent.md
-│   │   ├── powershell.agent.md
-│   │   ├── python.agent.md
-│   │   ├── bicep.agent.md
-│   │   ├── terraform.agent.md
-│   │   ├── azure-policy.agent.md
-│   │   ├── azure-devops-pipelines.agent.md
-│   │   ├── sql.agent.md
-│   │   ├── kusto.agent.md
-│   │   ├── data-analyst.agent.md
-│   │   ├── security.agent.md
-│   │   ├── review.agent.md
-│   │   ├── code-quality.agent.md
-│   │   ├── docs.agent.md
-│   │   ├── web-design.agent.md
-│   │   ├── theme-consistency.agent.md
-│   │   └── brainstorm.agent.md
-│   └── skills/
-│       ├── csharp/SKILL.md
-│       ├── razor-pages/SKILL.md
-│       ├── powershell/SKILL.md
-│       ├── python/SKILL.md
-│       ├── bicep/SKILL.md
-│       ├── terraform/SKILL.md
-│       ├── azure-policy/SKILL.md
-│       ├── azure-devops-pipelines/SKILL.md
-│       ├── sql/SKILL.md
-│       ├── kusto/SKILL.md
-│       ├── data-analyst/SKILL.md
-│       ├── security/SKILL.md
-│       ├── review/SKILL.md
-│       ├── code-quality/SKILL.md
-│       ├── docs/SKILL.md
-│       ├── web-design/SKILL.md
-│       ├── theme-consistency/SKILL.md
-│       └── brainstorm/SKILL.md
-├── scripts/
-│   └── bootstrap-agent-pack.ps1
+├── apm.yml                     # metadata only; install packs, not the root
+├── packs/
+│   ├── core/                   # every repository
+│   │   ├── apm.yml
+│   │   └── .apm/
+│   │       ├── agents/         # review, security, code-quality, brainstorm, docs
+│   │       └── skills/
+│   ├── iac/                    # Infrastructure as Code repositories
+│   │   ├── apm.yml
+│   │   └── .apm/
+│   │       ├── agents/         # bicep, terraform, powershell, Azure Policy, pipelines
+│   │       └── skills/
+│   ├── data/                   # SQL, Kusto, and data analysis
+│   │   ├── apm.yml
+│   │   └── .apm/
+│   │       ├── agents/         # sql, kql, data analyst
+│   │       └── skills/
+│   └── dev/                    # application development repositories
+│       ├── apm.yml
+│       └── .apm/
+│           ├── agents/         # csharp, Razor Pages, python, web-design, theme-consistency
+│           └── skills/
 └── sample-target-repo/
     └── apm.yml
 ```
 
-## Recommended model
+## Packs
 
-Use this repository as the package source. Consumers should declare it in their own `apm.yml` and run APM.
+Each consumer installs only what matches its domain, so unrelated agents do not add context or confuse agent selection.
 
-### Shared pack
+| Pack | Install path | Contents |
+|---|---|---|
+| core | `TmAI-Dev/TM-AiPackageManagement/packs/core` | Review, Security, Code Quality, Brainstorm, Docs |
+| iac | `TmAI-Dev/TM-AiPackageManagement/packs/iac` | Bicep (AVM-first), Terraform, PowerShell, Azure Policy, Azure DevOps Pipelines |
+| data | `TmAI-Dev/TM-AiPackageManagement/packs/data` | SQL, KQL (Kusto), Data Analyst |
+| dev | `TmAI-Dev/TM-AiPackageManagement/packs/dev` | C#, Razor Pages, Python, Web Design, Theme Consistency |
 
-The `.apm/` directory is the package source and should always hold the common defaults:
+Typical combinations: IaC repository = `core` + `iac`; application repository = `core` + `dev`; database or monitoring repository = `core` + `data`. Combine packs freely when a repository spans domains.
 
-- C# agent
-- Razor Pages agent
-- PowerShell agent
-- Python agent
-- Bicep agent
-- Terraform agent
-- Azure Policy agent
-- Azure DevOps Pipelines agent
-- SQL agent
-- Kusto (KQL) agent
-- Data analyst agent
-- Security agent (appsec, Azure security posture, threat modeling)
-- Review agent
-- Code quality agent
-- Docs agent
-- Web Design agent
-- Theme Consistency agent
-- Brainstorm agent
-
-### Repo local additions
-
-Keep repo-specific instructions in the target repo, not in the central pack, when they depend on application-specific rules.
+Keep shared agents (review, security, code quality, brainstorm, and docs) in `core` only; do not duplicate them across packs. Keep repo-specific instructions in the target repo, not in these packs.
 
 ## Consumer setup
 
@@ -102,24 +66,24 @@ irm https://aka.ms/apm-windows | iex
 Alternatively, follow the full [installation guide](https://microsoft.github.io/apm/getting-started/installation/). Then run this from the target repository:
 
 ```powershell
-apm install TmAI-Dev/TM-AiPackageManagement --target copilot
+apm install TmAI-Dev/TM-AiPackageManagement/packs/core --target copilot
+apm install TmAI-Dev/TM-AiPackageManagement/packs/iac --target copilot
 ```
 
 APM will:
 
-- add the package to `apm.yml`
+- add the packages to `apm.yml`
 - write `apm.lock.yaml` with resolved versions and hashes
 - deploy agents and skills to the Copilot-supported runtime directories
 
-Use the wrapper when installing this package into several target repositories:
+Use `core` + `dev` for application repositories:
 
 ```powershell
-pwsh ./scripts/bootstrap-agent-pack.ps1 -TargetRepos "C:\path\to\repo-1", "C:\path\to\repo-2"
+apm install TmAI-Dev/TM-AiPackageManagement/packs/core --target copilot
+apm install TmAI-Dev/TM-AiPackageManagement/packs/dev --target copilot
 ```
 
-The wrapper requires APM to be installed and runs `apm install <package> --target copilot` in each target. It does not copy or maintain generated runtime files.
-
-After running it, reload the VS Code window and pick the agent from the Chat agent picker. Commit `apm.yml` and `apm.lock.yaml` in each consumer repository; do not commit generated runtime files unless that repository intentionally manages them.
+After installing, reload the VS Code window and pick the agent from the Chat agent picker. Commit `apm.yml` and `apm.lock.yaml` in each consumer repository; do not commit generated runtime files unless that repository intentionally manages them. On a fresh clone, run `apm install` to restore the packs.
 
 ## Updating existing installations
 
@@ -139,31 +103,8 @@ To update several repositories at once, run the update command in each:
 
 If an update does not pick up new content, run `apm install --help` to confirm the flags supported by your installed APM version.
 
-## Example agent set
-
-The included agents are:
-
-- C# Agent
-- Razor Pages Agent
-- PowerShell Agent
-- Python Agent
-- Bicep Agent
-- Terraform Agent
-- Azure Policy Agent
-- Azure DevOps Pipelines Agent
-- SQL Agent
-- Kusto (KQL) Agent
-- Data Analyst Agent
-- Security Agent
-- Review Agent
-- Code Quality Agent
-- Docs Agent
-- Web Design Agent
-- Theme Consistency Agent
-- Brainstorm Agent
-
 ## Notes
 
-This repository is intentionally not tied to one application. It acts as an APM package source for all your repositories.
+This repository is intentionally not tied to one application. It acts as an APM package source for all your repositories, split into packs by domain.
 
 If you later want stricter repo-level integration with other harnesses, add the corresponding APM target during installation without changing the package primitives.

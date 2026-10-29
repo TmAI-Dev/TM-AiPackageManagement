@@ -1,8 +1,5 @@
 name: tm-agent-pack
-version: 1.0.0
-description: Reusable Copilot agents and skills for Microsoft development workflows.
+version: 2.0.0
+description: Source repository for the TM agent packs (core, iac, data, dev). Install a pack from packs/<name>, not the repository root.
 author: TmAI-Dev
 license: MIT
-
-includes:
-  - .apm/**
