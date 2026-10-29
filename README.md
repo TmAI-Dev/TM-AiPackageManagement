@@ -19,22 +19,22 @@ This repo is an [APM](https://microsoft.github.io/apm/) package containing reusa
 │   ├── core/                   # every repository
 │   │   ├── apm.yml
 │   │   └── .apm/
-│   │       ├── agents/         # review, security, code-quality, brainstorm, docs
+│   │       ├── agents/         # review, security, code-quality, brainstorm, docs, git-workflow, incident-troubleshooting, dependency-management
 │   │       └── skills/
 │   ├── iac/                    # Infrastructure as Code repositories
 │   │   ├── apm.yml
 │   │   └── .apm/
-│   │       ├── agents/         # bicep, terraform, powershell, Azure Policy, pipelines
+│   │       ├── agents/         # bicep, terraform, powershell, Azure Policy, pipelines, azure-architect, azure-cli, finops, containers, observability, migration
 │   │       └── skills/
 │   ├── data/                   # SQL, Kusto, and data analysis
 │   │   ├── apm.yml
 │   │   └── .apm/
-│   │       ├── agents/         # sql, kql, data analyst
+│   │       ├── agents/         # sql, kql, data analyst, power-bi, database-migrations
 │   │       └── skills/
 │   └── dev/                    # application development repositories
 │       ├── apm.yml
 │       └── .apm/
-│           ├── agents/         # csharp, Razor Pages, python, web-design, theme-consistency
+│           ├── agents/         # csharp, Razor Pages, python, web-design, theme-consistency, testing, api-design, entra-identity, ai-integration, performance
 │           └── skills/
 └── sample-target-repo/
     └── apm.yml
@@ -46,14 +46,14 @@ Each consumer installs only what matches its domain, so unrelated agents do not 
 
 | Pack | Install path | Contents |
 |---|---|---|
-| core | `TmAI-Dev/TM-AiPackageManagement/packs/core` | Review, Security, Code Quality, Brainstorm, Docs |
-| iac | `TmAI-Dev/TM-AiPackageManagement/packs/iac` | Bicep (AVM-first), Terraform, PowerShell, Azure Policy, Azure DevOps Pipelines |
-| data | `TmAI-Dev/TM-AiPackageManagement/packs/data` | SQL, KQL (Kusto), Data Analyst |
-| dev | `TmAI-Dev/TM-AiPackageManagement/packs/dev` | C#, Razor Pages, Python, Web Design, Theme Consistency |
+| core | `TmAI-Dev/TM-AiPackageManagement/packs/core` | Review, Security, Code Quality, Brainstorm, Docs, Git Workflow, Incident Troubleshooting, Dependency Management |
+| iac | `TmAI-Dev/TM-AiPackageManagement/packs/iac` | Bicep (AVM-first), Terraform, PowerShell, Azure Policy, Azure DevOps Pipelines, Azure Architect, Azure CLI, FinOps, Containers, Observability, Migration |
+| data | `TmAI-Dev/TM-AiPackageManagement/packs/data` | SQL, KQL (Kusto), Data Analyst, Power BI, Database Migrations |
+| dev | `TmAI-Dev/TM-AiPackageManagement/packs/dev` | C#, Razor Pages, Python, Web Design, Theme Consistency, Testing, API Design, Entra Identity, AI Integration, Performance |
 
 Typical combinations: IaC repository = `core` + `iac`; application repository = `core` + `dev`; database or monitoring repository = `core` + `data`. Combine packs freely when a repository spans domains.
 
-Keep shared agents (review, security, code quality, brainstorm, and docs) in `core` only; do not duplicate them across packs. Keep repo-specific instructions in the target repo, not in these packs.
+Keep shared agents (review, security, code quality, brainstorm, docs, git workflow, incident troubleshooting, and dependency management) in `core` only; do not duplicate them across packs. Keep repo-specific instructions in the target repo, not in these packs.
 
 ## Consumer setup
 
