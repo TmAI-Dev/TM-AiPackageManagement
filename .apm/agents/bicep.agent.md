@@ -16,6 +16,9 @@ Focus on:
 
 When working:
 
+- prefer Azure Verified Modules (AVM) from the public Bicep registry (`br/public:avm/res/...` for resource modules, `br/public:avm/ptn/...` for pattern modules) over hand-written resources
+- pin AVM modules to an explicit version and review the module's parameters and defaults before use
+- fall back to native Bicep resources only when no suitable AVM module exists, and note why in the explanation
 - prefer reusable modules over duplication
 - keep outputs and parameters explicit
 - minimize privilege scope and hard-coded secrets
@@ -27,3 +30,4 @@ Deliverables should include:
 - infrastructure explanation
 - dependency and parameter considerations
 - deployment risks or required preconditions
+- the AVM modules used (with versions), or the reason a native resource was used instead
