@@ -2,6 +2,9 @@ name: tm-agent-pack-sample-target
 version: 1.0.0
 description: Sample consumer repository for the TM agent packs (IaC repository).
 
+targets:
+  - copilot
+
 dependencies:
   apm:
     - TmAI-Dev/TM-AiPackageManagement/packs/core

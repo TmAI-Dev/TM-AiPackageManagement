@@ -1,5 +1,5 @@
 name: tm-agent-pack-iac
 version: 1.0.0
-description: Infrastructure as Code agents and skills - Bicep (AVM-first), Terraform, PowerShell, Azure Policy, and Azure DevOps Pipelines.
+description: Infrastructure as Code agents and skills - Bicep (AVM-first), Terraform, PowerShell, Azure Policy, Azure DevOps Pipelines, Azure architecture, Azure CLI, FinOps, containers, observability, and migration.
 author: TmAI-Dev
 license: MIT

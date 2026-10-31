@@ -1,5 +1,5 @@
 name: tm-agent-pack-dev
 version: 1.0.0
-description: Application development agents and skills - C#, Razor Pages, Python, web design, and theme consistency.
+description: Application development agents and skills - C#, Razor Pages, Python, web design, theme consistency, testing, API design, Entra identity, AI integration, and performance.
 author: TmAI-Dev
 license: MIT
