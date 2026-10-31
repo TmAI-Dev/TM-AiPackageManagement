@@ -83,7 +83,16 @@ apm install TmAI-Dev/TM-AiPackageManagement/packs/core --target copilot
 apm install TmAI-Dev/TM-AiPackageManagement/packs/dev --target copilot
 ```
 
-After installing, reload the VS Code window and pick the agent from the Chat agent picker. Commit `apm.yml` and `apm.lock.yaml` in each consumer repository; do not commit generated runtime files unless that repository intentionally manages them. On a fresh clone, run `apm install` to restore the packs.
+After installing, reload the VS Code window and pick the agent from the Chat agent picker.
+
+Following APM's recommendations, in each consumer repository:
+
+- Commit `apm.yml`, `apm.lock.yaml`, and the deployed agent and skill files (for example under `.github/`), so they are reviewable and available after clone and to CI.
+- Add `apm_modules/` to `.gitignore`; it is derived and restored by `apm install`.
+- Pin `targets:` in `apm.yml` (see [sample-target-repo/apm.yml](sample-target-repo/apm.yml)) so every machine deploys to the same harnesses.
+- On a fresh clone, run `apm install` to restore `apm_modules/`. In CI, use `apm install --frozen` to fail on lockfile drift.
+
+To keep the packs out of a repository instead, install them at user scope with `apm install -g <pack>`.
 
 ## Updating existing installations
 
@@ -93,7 +102,7 @@ To pull the latest agents and skills into a repository that already uses this pa
 apm install --update --target copilot
 ```
 
-This re-resolves dependencies to their latest versions and refreshes `apm.lock.yaml` and the deployed files. Review and commit the changed `apm.lock.yaml`, then reload the VS Code window.
+This re-resolves dependencies to their latest versions and refreshes `apm.lock.yaml` and the deployed files. Review and commit the changed `apm.lock.yaml` and deployed files, then reload the VS Code window.
 
 To update several repositories at once, run the update command in each:
 
@@ -102,9 +111,3 @@ To update several repositories at once, run the update command in each:
 ```
 
 If an update does not pick up new content, run `apm install --help` to confirm the flags supported by your installed APM version.
-
-## Notes
-
-This repository is intentionally not tied to one application. It acts as an APM package source for all your repositories, split into packs by domain.
-
-If you later want stricter repo-level integration with other harnesses, add the corresponding APM target during installation without changing the package primitives.
