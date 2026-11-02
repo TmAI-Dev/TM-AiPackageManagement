@@ -29,7 +29,7 @@ This repo is an [APM](https://microsoft.github.io/apm/) package containing reusa
 │   ├── data/                   # SQL, Kusto, and data analysis
 │   │   ├── apm.yml
 │   │   └── .apm/
-│   │       ├── agents/         # sql, kql, data analyst
+│   │       ├── agents/         # sql, kql, data analyst, content-rights
 │   │       └── skills/
 │   └── dev/                    # application development repositories
 │       ├── apm.yml
@@ -48,7 +48,7 @@ Each consumer installs only what matches its domain, so unrelated agents do not 
 |---|---|---|
 | core | `TmAI-Dev/TM-AiPackageManagement/packs/core` | Review, Security, Code Quality, Brainstorm, Docs |
 | iac | `TmAI-Dev/TM-AiPackageManagement/packs/iac` | Bicep (AVM-first), Terraform, PowerShell, Azure Policy, Azure DevOps Pipelines |
-| data | `TmAI-Dev/TM-AiPackageManagement/packs/data` | SQL, KQL (Kusto), Data Analyst |
+| data | `TmAI-Dev/TM-AiPackageManagement/packs/data` | SQL, KQL (Kusto), Data Analyst, Content Rights |
 | dev | `TmAI-Dev/TM-AiPackageManagement/packs/dev` | C#, Razor Pages, Python, Web Design, Theme Consistency |
 
 Typical combinations: IaC repository = `core` + `iac`; application repository = `core` + `dev`; database or monitoring repository = `core` + `data`. Combine packs freely when a repository spans domains.
