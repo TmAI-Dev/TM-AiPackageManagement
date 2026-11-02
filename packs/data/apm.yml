@@ -1,5 +1,5 @@
 name: tm-agent-pack-data
 version: 1.0.0
-description: Data agents and skills - SQL, KQL (Kusto), data analysis, Power BI, and database migrations.
+description: Data agents and skills - SQL, KQL (Kusto), data analysis, Power BI, database migrations, and website content rights assessment.
 author: TmAI-Dev
 license: MIT
