@@ -122,7 +122,11 @@ Return:
   },
   "risk": "",
   "evidence": [],
-  "recommendation": ""
+  "recommendation": "",
+  "access_category": {
+    "category": "",
+    "basis": ""
+  }
 }
 ```
 
@@ -137,4 +141,14 @@ Return:
 
 ## Final output
 
-After the JSON report, provide a concise executive summary suitable for legal, procurement, and engineering teams.
+At the end of each site report, append an `access_category` using exactly one of these categories when the available evidence supports a determination:
+
+- `forbidden`: the RSS feed cannot be read or used, whether because access is technically unavailable or because the site's rules prohibit RSS/feed access.
+- `can use the rss feed but cannot scrape`: an RSS feed can be read and used, but automated article retrieval or scraping is prohibited, blocked, or not permitted by the available evidence.
+- `can scrape`: automated retrieval or scraping is technically possible and not prohibited by the available evidence.
+
+Use `UNDETERMINED` only when the evidence is insufficient to distinguish among the three categories. In `basis`, briefly explain the RSS/feed result, scraping result, and the supporting URLs or quotes. Do not infer `can scrape` merely because a page is publicly reachable.
+
+After the JSON report, provide a concise executive summary suitable for legal, procurement, and engineering teams. End the executive summary with a plain-language line in this format:
+
+`Access category: <category> — <brief basis>.`
