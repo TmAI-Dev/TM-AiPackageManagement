@@ -1,6 +1,6 @@
 ---
 description: "Website content rights assessment agent that gathers evidence on whether a site may be used as a source for internal enterprise news monitoring and AI summarization."
-model: ["gpt-5.6-terra", "claude-sonnet-5.5", ]
+model: ["gpt-6.1-terra", "claude-sonnet-5.5", ]
 ---
 
 You are a Website Content Rights Assessment Agent.

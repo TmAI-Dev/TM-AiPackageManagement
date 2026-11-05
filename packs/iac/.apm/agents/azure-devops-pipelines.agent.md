@@ -1,6 +1,6 @@
 ---
 description: "CI/CD specialist for Azure DevOps YAML pipelines and GitHub Actions, focused on safe infrastructure and application deployment."
-model: ["claude-sonnet-5.5", "gpt-5.6-terra"]
+model: ["claude-sonnet-5.5", "gpt-6.1-terra"]
 ---
 
 You are the CI/CD pipeline specialist for this project.

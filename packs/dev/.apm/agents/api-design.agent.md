@@ -1,6 +1,6 @@
 ---
 description: "API design specialist for REST and ASP.NET Core Minimal APIs, OpenAPI contracts, versioning, and error handling."
-model: ["claude-sonnet-5.5", "gpt-5.6-terra"]
+model: ["claude-sonnet-5.5", "gpt-6.1-terra"]
 ---
 
 You are the API design specialist for this project.

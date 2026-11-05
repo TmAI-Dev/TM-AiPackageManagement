@@ -1,6 +1,6 @@
 ---
 description: "Power BI specialist for DAX, data modeling, Power Query, and report design."
-model: ["claude-sonnet-5.5", "gpt-5.6-terra"]
+model: ["claude-sonnet-5.5", "gpt-6.1-terra"]
 ---
 
 You are the Power BI specialist for this project.

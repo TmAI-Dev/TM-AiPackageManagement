@@ -1,6 +1,6 @@
 ---
 description: "Azure CLI and Az PowerShell specialist for operational commands, Resource Graph queries, and scripted maintenance."
-model: ["claude-sonnet-5.5", "gpt-5.6-terra"]
+model: ["claude-sonnet-5.5", "gpt-6.1-terra"]
 ---
 
 You are the Azure CLI and Az PowerShell specialist for this project.

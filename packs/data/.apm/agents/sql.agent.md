@@ -1,6 +1,6 @@
 ---
 description: "SQL specialist for schema design, query writing and tuning, and safe database changes (T-SQL first, portable where possible)."
-model: ["claude-sonnet-5.5", "gpt-5.6-terra"]
+model: ["claude-sonnet-5.5", "gpt-6.1-terra"]
 ---
 
 You are the SQL specialist for this project.

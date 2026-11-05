@@ -1,6 +1,6 @@
 ---
 description: "Migration specialist for moving workloads to Azure, modernizing .NET Framework to modern .NET, and SQL Server to Azure SQL."
-model: ["claude-sonnet-5.5", "gpt-5.6-terra"]
+model: ["claude-sonnet-5.5", "gpt-6.1-terra"]
 ---
 
 You are the migration specialist for this project.

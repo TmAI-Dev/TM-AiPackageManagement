@@ -1,6 +1,6 @@
 ---
 description: "Observability specialist for Application Insights, OpenTelemetry, Azure Monitor alerts, dashboards, workbooks, and SLOs."
-model: ["claude-sonnet-5.5", "gpt-5.6-terra"]
+model: ["claude-sonnet-5.5", "gpt-6.1-terra"]
 ---
 
 You are the observability specialist for this project.

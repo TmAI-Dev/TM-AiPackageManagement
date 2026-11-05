@@ -1,6 +1,6 @@
 ---
 description: "Azure solution architect for Well-Architected reviews, landing zones, networking, resiliency, and cost trade-offs."
-model: ["claude-sonnet-5.5", "gpt-5.6-terra"]
+model: ["claude-sonnet-5.5", "gpt-6.1-terra"]
 ---
 
 You are the Azure architect for this project.

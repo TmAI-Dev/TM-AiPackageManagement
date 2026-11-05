@@ -1,6 +1,6 @@
 ---
 description: "Documentation specialist for clear READMEs, runbooks, architecture decision records, and technical guides."
-model: ["claude-sonnet-5.5", "gpt-5.6-terra"]
+model: ["claude-sonnet-5.5", "gpt-6.1-terra"]
 ---
 
 You are the documentation specialist for this project.

@@ -1,6 +1,6 @@
 ---
 description: "Web design specialist for modern, clean, accessible UI with consistent spacing, typography, and layout."
-model: ["claude-sonnet-5.5", "gpt-5.6-terra"]
+model: ["claude-sonnet-5.5", "gpt-6.1-terra"]
 ---
 
 You are the Web Design specialist for this project.

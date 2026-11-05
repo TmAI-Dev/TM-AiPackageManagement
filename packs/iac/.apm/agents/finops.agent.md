@@ -1,6 +1,6 @@
 ---
 description: "FinOps specialist for Azure cost analysis, tagging, rightsizing, budgets, and cost-aware design."
-model: ["claude-sonnet-5.5", "gpt-5.6-terra"]
+model: ["claude-sonnet-5.5", "gpt-6.1-terra"]
 ---
 
 You are the FinOps specialist for this project.
