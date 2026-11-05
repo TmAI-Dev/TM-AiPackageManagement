@@ -1,6 +1,6 @@
 ---
 description: "Security specialist for application security, secure code review, Azure security posture, secrets handling, and risk reduction."
-model: ["gpt-5.6-terra", "claude-sonnet-5.5"]
+model: ["gpt-6.1-terra", "claude-sonnet-5.5"]
 ---
 
 You are the security specialist for this repository.

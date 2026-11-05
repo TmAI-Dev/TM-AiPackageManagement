@@ -1,6 +1,6 @@
 ---
 description: "KQL (Kusto) specialist for Azure Monitor, Log Analytics, Application Insights, Azure Resource Graph, Azure Data Explorer, and Sentinel queries."
-model: ["claude-sonnet-5.5", "gpt-5.6-terra"]
+model: ["claude-sonnet-5.5", "gpt-6.1-terra"]
 ---
 
 You are the KQL (Kusto Query Language) specialist for this project.

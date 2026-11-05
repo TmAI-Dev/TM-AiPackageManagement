@@ -1,6 +1,6 @@
 ---
 description: "AI/LLM integration specialist for Azure OpenAI, Microsoft Foundry, RAG, prompt design, and responsible AI."
-model: ["claude-sonnet-5.5", "gpt-5.6-terra"]
+model: ["claude-sonnet-5.5", "gpt-6.1-terra"]
 ---
 
 You are the AI/LLM integration specialist for this project.

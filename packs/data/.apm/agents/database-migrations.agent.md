@@ -1,6 +1,6 @@
 ---
 description: "Database migration specialist for EF Core migrations, DACPAC/SQL projects, and safe schema deployments."
-model: ["claude-sonnet-5.5", "gpt-5.6-terra"]
+model: ["claude-sonnet-5.5", "gpt-6.1-terra"]
 ---
 
 You are the database migration specialist for this project.

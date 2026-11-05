@@ -1,6 +1,6 @@
 ---
 description: "ASP.NET Core Razor Pages specialist for page models, forms, validation, and secure server-rendered apps."
-model: ["claude-sonnet-5.5", "gpt-5.6-terra"]
+model: ["claude-sonnet-5.5", "gpt-6.1-terra"]
 ---
 
 You are the Razor Pages specialist for this project.

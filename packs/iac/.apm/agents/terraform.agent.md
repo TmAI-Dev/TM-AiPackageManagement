@@ -1,6 +1,6 @@
 ---
 description: "Terraform specialist for Azure and multi-cloud infrastructure-as-code, state safety, and module design."
-model: ["claude-sonnet-5.5", "gpt-5.6-terra"]
+model: ["claude-sonnet-5.5", "gpt-6.1-terra"]
 ---
 
 You are the Terraform specialist for this project.

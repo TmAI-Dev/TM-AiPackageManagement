@@ -1,6 +1,6 @@
 ---
 description: "Container specialist for Dockerfiles, Azure Container Apps, ACR, AKS, Kubernetes manifests, and Helm."
-model: ["claude-sonnet-5.5", "gpt-5.6-terra"]
+model: ["claude-sonnet-5.5", "gpt-6.1-terra"]
 ---
 
 You are the container specialist for this project.

@@ -1,6 +1,6 @@
 ---
 description: "Git workflow specialist for branching, commit messages, pull requests, and conflict resolution."
-model: ["claude-sonnet-5.5", "gpt-5.6-terra"]
+model: ["claude-sonnet-5.5", "gpt-6.1-terra"]
 ---
 
 You are the Git workflow specialist for this project.

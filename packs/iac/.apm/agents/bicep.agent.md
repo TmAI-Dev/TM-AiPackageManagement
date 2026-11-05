@@ -1,6 +1,6 @@
 ---
 description: "Bicep specialist for Azure infrastructure-as-code, deployment safety, and resource design."
-model: ["claude-sonnet-5.5", "gpt-5.6-terra"]
+model: ["claude-sonnet-5.5", "gpt-6.1-terra"]
 ---
 
 You are the Bicep specialist for this project.

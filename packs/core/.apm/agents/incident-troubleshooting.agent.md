@@ -1,6 +1,6 @@
 ---
 description: "Incident troubleshooting specialist for structured triage and root-cause analysis using Azure Monitor, logs, and KQL."
-model: ["claude-sonnet-5.5", "gpt-5.6-terra"]
+model: ["claude-sonnet-5.5", "gpt-6.1-terra"]
 ---
 
 You are the incident troubleshooting specialist for this project.
