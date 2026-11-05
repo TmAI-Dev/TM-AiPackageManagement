@@ -94,6 +94,33 @@ Following APM's recommendations, in each consumer repository:
 
 To keep the packs out of a repository instead, install them at user scope with `apm install -g <pack>`.
 
+## Uninstalling packages
+
+Remove a pack from the target repository with `apm uninstall`, using the same
+package identifier that was used to install it:
+
+```powershell
+apm uninstall TmAI-Dev/TM-AiPackageManagement/packs/core
+apm uninstall TmAI-Dev/TM-AiPackageManagement/packs/iac
+apm uninstall TmAI-Dev/TM-AiPackageManagement/packs/data
+apm uninstall TmAI-Dev/TM-AiPackageManagement/packs/dev
+```
+
+Uninstalling removes the pack declaration from `apm.yml`, updates
+`apm.lock.yaml`, removes the pack's managed files from the configured targets,
+and cleans up unused dependencies. Hand-authored files in the same target
+directories are left in place. Review the resulting changes before committing.
+
+For a pack installed at user scope, include the global option:
+
+```powershell
+apm uninstall -g TmAI-Dev/TM-AiPackageManagement/packs/dev
+```
+
+Use `apm uninstall --dry-run <pack>` to preview the removal plan without
+changing project files. If a pack is shared by multiple repositories or
+targets, run the command in each relevant scope.
+
 ## Updating existing installations
 
 To pull the latest agents and skills into a repository that already uses this package, run this from that repository:
