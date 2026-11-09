@@ -34,7 +34,7 @@ This repo is an [APM](https://microsoft.github.io/apm/) package containing reusa
 │   └── dev/                    # application development repositories
 │       ├── apm.yml
 │       └── .apm/
-│           ├── agents/         # csharp, Razor Pages, python, web-design, theme-consistency, testing, api-design, entra-identity, ai-integration, performance
+│           ├── agents/         # csharp, Razor Pages, python, web-design, Teams Adaptive Cards, theme-consistency, testing, api-design, entra-identity, ai-integration, performance
 │           └── skills/
 └── sample-target-repo/
     └── apm.yml
@@ -49,7 +49,7 @@ Each consumer installs only what matches its domain, so unrelated agents do not 
 | core | `TmAI-Dev/TM-AiPackageManagement/packs/core` | Review, Security, Code Quality, Brainstorm, Docs, Git Workflow, Incident Troubleshooting, Dependency Management |
 | iac | `TmAI-Dev/TM-AiPackageManagement/packs/iac` | Bicep (AVM-first), Terraform, PowerShell, Azure Policy, Azure DevOps Pipelines, Azure Architect, Azure CLI, FinOps, Containers, Observability, Migration |
 | data | `TmAI-Dev/TM-AiPackageManagement/packs/data` | SQL, KQL (Kusto), Data Analyst, Power BI, Database Migrations, Content Rights |
-| dev | `TmAI-Dev/TM-AiPackageManagement/packs/dev` | C#, Razor Pages, Python, Web Design, Theme Consistency, Testing, API Design, Entra Identity, AI Integration, Performance |
+| dev | `TmAI-Dev/TM-AiPackageManagement/packs/dev` | C#, Razor Pages, Python, Web Design, Teams Adaptive Cards, Theme Consistency, Testing, API Design, Entra Identity, AI Integration, Performance |
 
 Typical combinations: IaC repository = `core` + `iac`; application repository = `core` + `dev`; database or monitoring repository = `core` + `data`. Combine packs freely when a repository spans domains.
 
