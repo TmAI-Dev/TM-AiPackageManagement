@@ -1,0 +1,5 @@
+name: tm-agent-pack-ai
+version: 1.0.0
+description: AI deployment agents and skills - Microsoft Foundry, prompt engineering, APM agent authoring, and AI evaluation.
+author: TmAI-Dev
+license: MIT

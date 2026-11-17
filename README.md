@@ -19,7 +19,7 @@ This repo is an [APM](https://microsoft.github.io/apm/) package containing reusa
 │   ├── core/                   # every repository
 │   │   ├── apm.yml
 │   │   └── .apm/
-│   │       ├── agents/         # review, security, code-quality, brainstorm, docs, git-workflow, incident-troubleshooting, dependency-management
+│   │       ├── agents/         # review, security, code-quality, brainstorm, planner, docs, git-workflow, incident-troubleshooting, dependency-management
 │   │       └── skills/
 │   ├── iac/                    # Infrastructure as Code repositories
 │   │   ├── apm.yml
@@ -31,10 +31,15 @@ This repo is an [APM](https://microsoft.github.io/apm/) package containing reusa
 │   │   └── .apm/
 │   │       ├── agents/         # sql, kql, data analyst, power-bi, database-migrations, content-rights
 │   │       └── skills/
-│   └── dev/                    # application development repositories
+│   ├── dev/                    # application development repositories
+│   │   ├── apm.yml
+│   │   └── .apm/
+│   │       ├── agents/         # csharp, Razor Pages, python, web-design, Teams Adaptive Cards, theme-consistency, testing, api-design, entra-identity, ai-integration, performance
+│   │       └── skills/
+│   └── ai/                     # AI deployment and agent authoring
 │       ├── apm.yml
 │       └── .apm/
-│           ├── agents/         # csharp, Razor Pages, python, web-design, Teams Adaptive Cards, theme-consistency, testing, api-design, entra-identity, ai-integration, performance
+│           ├── agents/         # microsoft-foundry, prompt-engineering, apm-agent-author, ai-evaluation
 │           └── skills/
 └── sample-target-repo/
     └── apm.yml
@@ -46,14 +51,15 @@ Each consumer installs only what matches its domain, so unrelated agents do not 
 
 | Pack | Install path | Contents |
 |---|---|---|
-| core | `TmAI-Dev/TM-AiPackageManagement/packs/core` | Review, Security, Code Quality, Brainstorm, Docs, Git Workflow, Incident Troubleshooting, Dependency Management |
+| core | `TmAI-Dev/TM-AiPackageManagement/packs/core` | Review, Security, Code Quality, Brainstorm, Planner, Docs, Git Workflow, Incident Troubleshooting, Dependency Management |
 | iac | `TmAI-Dev/TM-AiPackageManagement/packs/iac` | Bicep (AVM-first), Terraform, PowerShell, Azure Policy, Azure DevOps Pipelines, Azure Architect, Azure CLI, FinOps, Containers, Observability, Migration |
 | data | `TmAI-Dev/TM-AiPackageManagement/packs/data` | SQL, KQL (Kusto), Data Analyst, Power BI, Database Migrations, Content Rights |
 | dev | `TmAI-Dev/TM-AiPackageManagement/packs/dev` | C#, Razor Pages, Python, Web Design, Teams Adaptive Cards, Theme Consistency, Testing, API Design, Entra Identity, AI Integration, Performance |
+| ai | `TmAI-Dev/TM-AiPackageManagement/packs/ai` | Microsoft Foundry, Prompt Engineering, APM Agent Author, AI Evaluation |
 
-Typical combinations: IaC repository = `core` + `iac`; application repository = `core` + `dev`; database or monitoring repository = `core` + `data`. Combine packs freely when a repository spans domains.
+Typical combinations: IaC repository = `core` + `iac`; application repository = `core` + `dev`; database or monitoring repository = `core` + `data`; AI deployment or agent authoring repository = `core` + `ai`. Combine packs freely when a repository spans domains.
 
-Keep shared agents (review, security, code quality, brainstorm, docs, git workflow, incident troubleshooting, and dependency management) in `core` only; do not duplicate them across packs. Keep repo-specific instructions in the target repo, not in these packs.
+Keep shared agents (review, security, code quality, brainstorm, planner, docs, git workflow, incident troubleshooting, and dependency management) in `core` only; do not duplicate them across packs. Keep repo-specific instructions in the target repo, not in these packs.
 
 ## Consumer setup
 
@@ -83,6 +89,13 @@ apm install TmAI-Dev/TM-AiPackageManagement/packs/core --target copilot
 apm install TmAI-Dev/TM-AiPackageManagement/packs/dev --target copilot
 ```
 
+For AI deployment, evaluation, prompt engineering, and APM agent authoring:
+
+```powershell
+apm install TmAI-Dev/TM-AiPackageManagement/packs/core --target copilot
+apm install TmAI-Dev/TM-AiPackageManagement/packs/ai --target copilot
+```
+
 After installing, reload the VS Code window and pick the agent from the Chat agent picker.
 
 Following APM's recommendations, in each consumer repository:
@@ -104,6 +117,7 @@ apm uninstall TmAI-Dev/TM-AiPackageManagement/packs/core
 apm uninstall TmAI-Dev/TM-AiPackageManagement/packs/iac
 apm uninstall TmAI-Dev/TM-AiPackageManagement/packs/data
 apm uninstall TmAI-Dev/TM-AiPackageManagement/packs/dev
+apm uninstall TmAI-Dev/TM-AiPackageManagement/packs/ai
 ```
 
 Uninstalling removes the pack declaration from `apm.yml`, updates
