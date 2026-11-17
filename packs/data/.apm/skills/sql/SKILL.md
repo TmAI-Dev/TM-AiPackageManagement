@@ -1,3 +1,8 @@
+---
+name: sql
+description: "SQL specialist for schema design, query writing, tuning, and safe database changes. Covers parameterized queries, indexed performance, migrations, and T-SQL (portable where possible). Use for SQL queries, schema design, query optimization, and database changes."
+---
+
 # SQL skill
 
 Use this skill for SQL queries, schema design, and database changes.

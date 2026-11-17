@@ -1,3 +1,8 @@
+---
+name: azure-policy
+description: "Azure governance using Policy with built-in definitions, initiatives, and least-privilege assignments. Plans rollout from Audit to Deny/Modify effects. Use for Azure governance, policy design, and compliance enforcement."
+---
+
 # Azure Policy skill
 
 Use this skill for Azure governance and policy work.

@@ -1,3 +1,8 @@
+---
+name: docs
+description: "Creates and maintains technical documentation with clear structure, copy-pasteable commands, and verified paths. Grounds content in actual repository state and uses ADRs and diagrams for decisions. Use for writing, updating, or reviewing technical documentation."
+---
+
 # Docs skill
 
 Use this skill for technical documentation.

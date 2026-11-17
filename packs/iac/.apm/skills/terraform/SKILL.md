@@ -1,3 +1,8 @@
+---
+name: terraform
+description: "Terraform for Azure infrastructure with Azure Verified Modules, pinned versions, and remote state management. Emphasizes naming conventions, security defaults, and infrastructure validation. Use for Terraform development, infrastructure as code, and cloud deployments."
+---
+
 # Terraform skill
 
 Use this skill for Terraform infrastructure and deployment work.

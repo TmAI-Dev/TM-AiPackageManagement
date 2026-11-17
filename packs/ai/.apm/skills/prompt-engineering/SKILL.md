@@ -1,3 +1,8 @@
+---
+name: prompt-engineering
+description: "Creates and evaluates prompts and agent instructions with clear boundaries and input/output contracts. Separates trusted instructions from untrusted content. Use for prompt creation, instruction design, and prompt optimization."
+---
+
 # Prompt engineering skill
 
 Use this skill for creating and evaluating prompts and agent instructions.

@@ -1,3 +1,8 @@
+---
+name: performance
+description: "Diagnoses and improves application performance through measurement, profiling, and targeted optimization. Avoids premature caching and addresses proven bottlenecks. Use for performance analysis, profiling, and performance tuning."
+---
+
 # Performance skill
 
 Use this skill for diagnosing and improving performance.

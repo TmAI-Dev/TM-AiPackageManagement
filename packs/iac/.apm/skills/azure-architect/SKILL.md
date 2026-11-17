@@ -1,3 +1,8 @@
+---
+name: azure-architect
+description: "Azure architecture and design following the Well-Architected Framework. Evaluates designs against reliability, security, cost, and operational requirements. Use for Azure architecture design, solution assessment, and technology recommendations."
+---
+
 # Azure architect skill
 
 Use this skill for Azure architecture and design decisions.

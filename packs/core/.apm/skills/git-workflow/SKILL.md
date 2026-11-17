@@ -1,3 +1,8 @@
+---
+name: git-workflow
+description: "Manages Git history with focused commits, clear PR descriptions, and safe branch operations. Maintains readable history and prevents secrets from entering version control. Use for Git workflow planning, commit advice, and PR preparation."
+---
+
 # Git workflow skill
 
 Use this skill for Git history, branches, and pull requests.

@@ -1,3 +1,8 @@
+---
+name: observability
+description: "Monitoring, telemetry, and alerting using OpenTelemetry and Application Insights. Defines monitoring as code with SLOs for critical services. Use for monitoring design, telemetry setup, and observability architecture."
+---
+
 # Observability skill
 
 Use this skill for monitoring, telemetry, and alerting.

@@ -1,3 +1,8 @@
+---
+name: content-rights
+description: "Assesses legal and licensing risks when using websites as sources for internal monitoring and AI summarization. Reviews Terms of Use, copyright, robots.txt, and AI-specific policies. Use for content rights assessment and legal compliance evaluation."
+---
+
 # Content rights skill
 
 Use this skill to assess whether a website may be used as a source for internal enterprise news monitoring and AI summarization.

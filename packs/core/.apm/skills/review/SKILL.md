@@ -1,3 +1,8 @@
+---
+name: review
+description: "Reviews code and design decisions for correctness, maintainability, and security. Provides specific, evidence-based feedback distinguishing blockers from suggestions. Use for code review, design review, and quality assessment."
+---
+
 # Review skill
 
 Use this skill when reviewing code or design decisions.

@@ -1,3 +1,8 @@
+---
+name: entra-identity
+description: "Authentication and authorization configuration using Entra ID with managed identities and federated credentials. Implements PKCE flows and least-privilege RBAC. Use for identity implementation, RBAC design, and Entra configuration."
+---
+
 # Entra identity skill
 
 Use this skill for authentication, authorization, and identity configuration.

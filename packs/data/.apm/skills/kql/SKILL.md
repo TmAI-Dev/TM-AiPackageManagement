@@ -1,3 +1,8 @@
+---
+name: kql
+description: "Kusto Query Language specialist for Azure Monitor, Log Analytics, Application Insights, Azure Resource Graph, Azure Data Explorer, and Sentinel. Optimizes queries with time filtering, appropriate aggregation, and performance best practices. Use for creating KQL queries for monitoring, alerting, and diagnostics."
+---
+
 # KQL skill
 
 Use this skill for Kusto Query Language queries in Azure Monitor, Log Analytics, Application Insights, Azure Resource Graph, Azure Data Explorer, and Sentinel.

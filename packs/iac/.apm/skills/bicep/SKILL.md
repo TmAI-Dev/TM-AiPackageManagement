@@ -1,3 +1,8 @@
+---
+name: bicep
+description: "Azure Bicep for infrastructure as code with reusable modules and secure defaults. Emphasizes readability, naming conventions, and secure identity patterns. Use for Bicep development, infrastructure design, and deployment templates."
+---
+
 # Bicep skill
 
 Use this skill for Azure infrastructure and deployment work.

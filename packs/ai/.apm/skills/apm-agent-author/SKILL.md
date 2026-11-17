@@ -1,3 +1,8 @@
+---
+name: apm-agent-author
+description: "Guides creation and maintenance of reusable APM agents following package structure and harness conventions. Ensures least-privilege access and proper packaging for discovery. Use for creating new APM agents, maintaining agent packages, and package validation."
+---
+
 # APM agent authoring skill
 
 Use this skill for creating and maintaining reusable Agent Package Manager agents.

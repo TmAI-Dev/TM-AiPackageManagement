@@ -1,3 +1,8 @@
+---
+name: razor-pages
+description: "ASP.NET Core Razor Pages development with thin PageModels, async handlers, and proper validation. Implements secure, accessible forms with antiforgery protection. Use for Razor Pages development, form handling, and ASP.NET Core UI work."
+---
+
 # Razor Pages skill
 
 Use this skill for ASP.NET Core Razor Pages work.

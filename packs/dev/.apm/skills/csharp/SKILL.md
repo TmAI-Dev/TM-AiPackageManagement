@@ -1,3 +1,8 @@
+---
+name: csharp
+description: "Expert guidance on .NET, C#, ASP.NET Core development with focus on immutability, async patterns, and clear boundaries. Provides production-safe code with proper error handling and testing. Use for C# development, .NET architecture, and code review."
+---
+
 # C# skill
 
 Use this skill for .NET, C#, ASP.NET Core, libraries, and related backend work.

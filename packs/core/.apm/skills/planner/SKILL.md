@@ -1,3 +1,8 @@
+---
+name: planner
+description: "Produces actionable implementation plans with clear dependencies, acceptance criteria, and risk analysis. Separates observations from assumptions and identifies open decisions. Use for creating detailed project plans, breaking down work, and validating implementation approach."
+---
+
 # Planning skill
 
 Use this skill for producing actionable implementation plans.

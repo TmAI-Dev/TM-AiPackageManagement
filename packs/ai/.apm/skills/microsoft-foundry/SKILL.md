@@ -1,3 +1,8 @@
+---
+name: microsoft-foundry
+description: "Designs, deploys, and operates Microsoft Foundry solutions with managed identity and least-privilege access. Handles service capabilities, quotas, evaluation, and deployment verification. Use for Foundry project design, deployment, monitoring, and troubleshooting."
+---
+
 # Microsoft Foundry skill
 
 Use this skill for designing, deploying, and operating Microsoft Foundry solutions.

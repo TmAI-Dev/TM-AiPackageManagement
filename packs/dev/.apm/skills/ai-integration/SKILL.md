@@ -1,3 +1,8 @@
+---
+name: ai-integration
+description: "Builds features on LLMs and Azure AI services with managed identity and secure input validation. Integrates RAG with AI Search for grounded answers. Use for AI feature development, LLM integration, and AI safety assessment."
+---
+
 # AI integration skill
 
 Use this skill for building features on LLMs and Azure AI services.

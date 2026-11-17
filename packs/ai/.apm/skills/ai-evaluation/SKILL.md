@@ -1,3 +1,8 @@
+---
+name: ai-evaluation
+description: "Evaluates models, prompts, retrieval systems, and agents with comprehensive metrics. Defines success criteria, baseline comparisons, and includes edge/failure cases. Use for model evaluation, prompt assessment, and agent quality assurance."
+---
+
 # AI evaluation skill
 
 Use this skill for evaluating models, prompts, retrieval, and agents.

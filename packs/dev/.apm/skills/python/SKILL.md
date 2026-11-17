@@ -1,3 +1,8 @@
+---
+name: python
+description: "Python development for applications, APIs, scripts, and libraries following PEP 8 with type hints. Emphasizes testing with pytest, virtual environments, and security best practices. Use for Python development, security review, and code quality."
+---
+
 # Python skill
 
 Use this skill for Python application, API, script, and library work.

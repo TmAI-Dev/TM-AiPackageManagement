@@ -1,3 +1,8 @@
+---
+name: database-migrations
+description: "Handles schema changes and database deployments with safety and reversibility. Uses expand/contract patterns for backward-compatible changes and idempotent scripts. Use for database schema changes, migrations, and deployment planning."
+---
+
 # Database migrations skill
 
 Use this skill for schema changes and database deployments.

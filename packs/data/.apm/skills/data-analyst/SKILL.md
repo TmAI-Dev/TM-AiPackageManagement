@@ -1,3 +1,8 @@
+---
+name: data-analyst
+description: "Supports data science and analysis work with focus on quality, reproducibility, and interpretability. Checks data quality before analysis and uses appropriate statistical methods. Use for data analysis, exploratory data analysis (EDA), and data quality assessment."
+---
+
 # Data analyst skill
 
 Use this skill for data science and data analysis work.

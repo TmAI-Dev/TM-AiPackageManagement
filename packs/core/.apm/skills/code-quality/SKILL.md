@@ -1,3 +1,8 @@
+---
+name: code-quality
+description: "Maintains code quality through refactoring for readability, simplicity, and reduced duplication. Improves maintainability by reducing complexity and improving testability. Use when reviewing code, planning refactoring, or improving long-term maintainability."
+---
+
 # Code quality skill
 
 Use this skill for maintainability, readability, and engineering hygiene.

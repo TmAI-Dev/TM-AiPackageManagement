@@ -1,3 +1,8 @@
+---
+name: security
+description: "Provides security reviews, secure coding guidance, and risk analysis against OWASP and threat models. Covers authentication, secrets management, infrastructure security, and dependency vulnerabilities. Use for security code review, threat modeling, and security architecture guidance."
+---
+
 # Security skill
 
 Use this skill for security reviews, secure coding guidance, and risk analysis.

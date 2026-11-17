@@ -1,3 +1,8 @@
+---
+name: power-bi
+description: "Power BI specialist for modeling, DAX expressions, and report design. Applies star schema patterns, row-level security, and performance optimization. Use for Power BI model design, DAX expressions, and report development."
+---
+
 # Power BI skill
 
 Use this skill for Power BI models, DAX, and reports.

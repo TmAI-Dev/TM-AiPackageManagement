@@ -1,3 +1,8 @@
+---
+name: brainstorm
+description: "Creative brainstorming support for exploring ideas, suggesting features, and shaping application direction. Generates diverse options with unconventional ideas, weighs trade-offs, and recommends next steps. Use when ideating or planning new features and architectural directions."
+---
+
 # Brainstorm skill
 
 Use this skill when exploring ideas, features, or direction for an application.

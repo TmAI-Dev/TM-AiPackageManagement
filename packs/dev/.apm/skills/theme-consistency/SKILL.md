@@ -1,3 +1,8 @@
+---
+name: theme-consistency
+description: "Ensures consistent theming across UI by defining theme tokens once and applying them uniformly. Maintains theme in all pages, components, and states. Use for theme implementation, style consistency, and design system maintenance."
+---
+
 # Theme consistency skill
 
 Use this skill whenever a color template or styling is added or changed on a page.

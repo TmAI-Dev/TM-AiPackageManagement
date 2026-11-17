@@ -1,3 +1,8 @@
+---
+name: azure-cli
+description: "Azure CLI and Az PowerShell operational work for resource management and querying. Uses JMESPath and Resource Graph for inventory operations. Use for Azure operations, resource querying, and cloud management scripting."
+---
+
 # Azure CLI skill
 
 Use this skill for Azure CLI and Az PowerShell operational work.

@@ -1,3 +1,8 @@
+---
+name: api-design
+description: "Designs and builds HTTP APIs with contract-first OpenAPI specifications. Applies correct HTTP methods, status codes, and ProblemDetails error handling. Use for API design, REST service development, and API documentation."
+---
+
 # API design skill
 
 Use this skill for designing and building HTTP APIs.

@@ -1,3 +1,8 @@
+---
+name: powershell
+description: "PowerShell automation and Windows scripting with validated inputs, robust error handling, and idempotent behavior. Emphasizes clarity and security in credential and path handling. Use for scripting, automation, and operational tooling."
+---
+
 # PowerShell skill
 
 Use this skill for automation, Windows scripting, and operational tooling.

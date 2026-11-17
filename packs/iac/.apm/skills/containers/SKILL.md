@@ -1,3 +1,8 @@
+---
+name: containers
+description: "Container images and Azure container hosting with multi-stage builds, security scanning, and health probes. Prefers Container Apps unless Kubernetes features required. Use for Docker development, container security, and container deployment."
+---
+
 # Containers skill
 
 Use this skill for container images and container hosting on Azure.

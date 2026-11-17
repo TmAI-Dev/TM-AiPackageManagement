@@ -1,3 +1,8 @@
+---
+name: web-design
+description: "Modern, accessible UI design with clean visual hierarchy using design tokens and limited color palettes. Responsive, mobile-first layouts with WCAG AA compliance. Use for UI design, accessibility, and design system work."
+---
+
 # Web design skill
 
 Use this skill for UI and page design work.
