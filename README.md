@@ -29,7 +29,7 @@ This repo is an [APM](https://microsoft.github.io/apm/) package containing reusa
 │   ├── data/                   # SQL, Kusto, and data analysis
 │   │   ├── apm.yml
 │   │   └── .apm/
-│   │       ├── agents/         # sql, kql, data analyst, power-bi, database-migrations, content-rights
+│   │       ├── agents/         # sql, kql, data analyst, Norwegian equity paper trading, power-bi, database-migrations, content-rights
 │   │       └── skills/
 │   ├── dev/                    # application development repositories
 │   │   ├── apm.yml
@@ -53,7 +53,7 @@ Each consumer installs only what matches its domain, so unrelated agents do not 
 |---|---|---|
 | core | `TmAI-Dev/TM-AiPackageManagement/packs/core` | Review, Security, Code Quality, Brainstorm, Planner, Docs, Git Workflow, Incident Troubleshooting, Dependency Management |
 | iac | `TmAI-Dev/TM-AiPackageManagement/packs/iac` | Bicep (AVM-first), Terraform, PowerShell, Azure Policy, Azure DevOps Pipelines, Azure Architect, Azure CLI, FinOps, Containers, Observability, Migration |
-| data | `TmAI-Dev/TM-AiPackageManagement/packs/data` | SQL, KQL (Kusto), Data Analyst, Power BI, Database Migrations, Content Rights |
+| data | `TmAI-Dev/TM-AiPackageManagement/packs/data` | SQL, KQL (Kusto), Data Analyst, Norwegian Equity Paper Trading, Power BI, Database Migrations, Content Rights |
 | dev | `TmAI-Dev/TM-AiPackageManagement/packs/dev` | C#, Razor Pages, Python, Web Design, Teams Adaptive Cards, Theme Consistency, Testing, API Design, Entra Identity, AI Integration, Performance |
 | ai | `TmAI-Dev/TM-AiPackageManagement/packs/ai` | Microsoft Foundry, Prompt Engineering, APM Agent Author, AI Evaluation |
 
